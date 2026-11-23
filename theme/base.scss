@@ -441,3 +441,21 @@ main.content img {
 #quarto-appendix .quarto-appendix-bibtex code {
   color: var(--ink);
 }
+
+/* About page: round profile photo beside the opening paragraph. */
+main.content img.about-avatar {
+  float: right;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  margin: 0.35rem 0 1rem 1.5rem;
+}
+@media (max-width: 575.98px) {
+  main.content img.about-avatar {
+    width: 96px;
+    height: 96px;
+    margin-left: 1rem;
+  }
+}

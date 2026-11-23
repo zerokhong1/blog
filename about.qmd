@@ -1,9 +1,11 @@
 ---
 title: "About"
 toc: false
+image: assets/avatar.jpg
+image-alt: "Photo of Thai Luu"
 ---
 
-I'm Thai Luu, and I'm learning SLAM with 3D Gaussian Splatting. This blog is where I write up what I learn, one question at a time.
+![Photo of Thai Luu](assets/avatar.jpg){.about-avatar} I'm Thai Luu, and I'm learning SLAM with 3D Gaussian Splatting. This blog is where I write up what I learn, one question at a time.
 
 I came to the field from classical state estimation (Kalman and particle filters, poses on Lie groups, LiDAR-inertial odometry), so the rendering side is newer to me than the estimation side.
 

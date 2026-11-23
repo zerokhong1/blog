@@ -74,7 +74,7 @@ posts/<date-slug>/   one folder per post: index.qmd and its figures
 _templates/post.qmd  post template; files and folders starting with "_" are never rendered
 _freeze/             stored code results, created by the first render of a post with code
 theme/               colours (light.scss, dark.scss) and all styling (base.scss)
-assets/              logo and favicon (mark.svg), self-hosted fonts and their licences
+assets/              logo and favicon (mark.svg), profile photo (avatar.jpg), self-hosted fonts and their licences
 .github/workflows/   publish workflow
 ```
 
