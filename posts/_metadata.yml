@@ -6,3 +6,4 @@ toc: true
 toc-depth: 2
 citation: true
 license: "CC BY 4.0"
+reference-location: margin   # footnotes appear as sidenotes beside the text

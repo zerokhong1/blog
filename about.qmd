@@ -28,10 +28,10 @@ Each post asks one question and puts it through the test I use to decide whether
 2. Re-implement it and match a reference implementation, with the numbers shown.
 3. Say what is still open.
 
-Posts stick to textbook material and published methods.
+Posts stick to textbook material and published methods. To follow new ones, add `https://zerokhong1.github.io/blog/index.xml` to a feed reader such as Feedly or Inoreader.
 
 ## Corrections
 
-These are notes from someone still learning, so expect mistakes. If you find one, please [open an issue](https://github.com/zerokhong1/blog/issues). I'll fix the post and credit you.
+These are notes from someone still learning, so expect mistakes. If you find one, please [open an issue](https://github.com/zerokhong1/blog/issues). I'll fix the post and credit you. For anything else, you can find me on [LinkedIn](https://www.linkedin.com/in/congthaineur/).
 
 Text is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and code snippets under MIT, unless a post says otherwise. Material from other sources, such as figures from course slides, is credited where it appears and keeps its original licence.

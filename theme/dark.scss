@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+
+// Dark mode: the mid-grey of a robotics 3D viewer rather than near-black,
+// with the same three axis accents, lightened to stay readable.
+$paper:        #2a2b2e;
+$ink:          #e4e6e9;
+$muted:        #a3aab4;
+$rule:         #3e4045;
+$code-surface: #222326;
+$axis-x:       #f2797b;
+$axis-y:       #6bcf96;
+$axis-z:       #8db4ff;
+$splat-wall:   #c9ced6;
+
+$body-bg:        $paper;
+$body-color:     $ink;
+$link-color:     $axis-z;
+$primary:        $axis-z;
+$text-muted:     $muted;
+$border-color:   $rule;
+
+$navbar-bg:      $paper;
+$navbar-fg:      $ink;
+$navbar-hl:      $axis-z;
+$footer-bg:      $paper;
+$footer-fg:      $muted;
+
+$code-block-bg:  $code-surface;
+$code-bg:        $code-surface;
+$code-color:     $ink;
+$toc-color:      $muted;
+
+$callout-color-note:      $axis-z;
+$callout-color-tip:       $axis-y;
+$callout-color-important: $axis-x;

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- A pose frame drawn with Gaussians: x red, y green, z blue (toward the viewer). -->
+  <ellipse cx="19.5" cy="18.5" rx="7.5" ry="3" fill="#d9484f" fill-opacity="0.9"/>
+  <ellipse cx="12.5" cy="11.5" rx="7.5" ry="3" transform="rotate(90 12.5 11.5)" fill="#34a065" fill-opacity="0.9"/>
+  <ellipse cx="8.8" cy="22.2" rx="6" ry="2.8" transform="rotate(135 8.8 22.2)" fill="#2f6fdb" fill-opacity="0.9"/>
+</svg>

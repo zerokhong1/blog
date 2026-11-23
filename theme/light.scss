@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+
+// Light mode: cool paper, charcoal ink. The three accents are the axis colours
+// robotics viewers use for a pose frame: x red, y green, z blue.
+$paper:        #f8f9fb;
+$ink:          #1c2026;
+$muted:        #5a6371;
+$rule:         #e2e5ea;
+$code-surface: #eff1f5;
+$axis-x:       #c93f48;
+$axis-y:       #2f8f5b;
+$axis-z:       #1f5bc4;
+$splat-wall:   #4f5864;
+
+$body-bg:        $paper;
+$body-color:     $ink;
+$link-color:     $axis-z;
+$primary:        $axis-z;
+$text-muted:     $muted;
+$border-color:   $rule;
+
+$navbar-bg:      $paper;
+$navbar-fg:      $ink;
+$navbar-hl:      $axis-z;
+$footer-bg:      $paper;
+$footer-fg:      $muted;
+
+$code-block-bg:  $code-surface;
+$code-bg:        $code-surface;
+$code-color:     $ink;
+$toc-color:      $muted;
+
+$callout-color-note:      $axis-z;
+$callout-color-tip:       $axis-y;
+$callout-color-important: $axis-x;

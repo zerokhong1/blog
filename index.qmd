@@ -1,14 +1,36 @@
 ---
-title: "Posts"
-subtitle: "One question per post: derive the answer, check it in code, say what is still open."
+title: "Thai Luu"
+pagetitle: "Thai Luu"
+body-classes: home
+description: "Notes from learning SLAM with 3D Gaussian Splatting, derived on paper and checked in code."
+page-layout: article
+toc: false
 listing:
+  id: posts
   contents: posts
   sort: "date desc"
-  type: default
-  categories: true
+  template: _listing.ejs
+  fields: [date, title, description, categories, reading-time]
+  date-format: "D MMM YYYY"
+  feed: true
   sort-ui: false
   filter-ui: false
-  feed: true
-page-layout: full
-title-block-banner: true
 ---
+
+::: {.column-page-right .home-hero}
+{{< include _hero.qmd >}}
+:::
+
+::: {.column-page-right .home-intro}
+```{=html}
+<h1>Derived on paper, checked in code.</h1>
+<p>Notes from learning SLAM with 3D Gaussian Splatting, one question at a time.</p>
+```
+:::
+
+```{=html}
+<h2 class="home-section-title">Posts</h2>
+```
+
+::: {#posts}
+:::

@@ -1,0 +1,443 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Plex Sans", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace:  "Plex Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+$serif:                  "Literata", Georgia, "Times New Roman", serif;
+
+$headings-font-weight:   600;
+$line-height-base:       1.6;
+$code-block-border-left: false;
+$callout-border-width:   3px;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper: #{$paper};
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --rule: #{$rule};
+  --code-surface: #{$code-surface};
+  --axis-x: #{$axis-x};
+  --axis-y: #{$axis-y};
+  --axis-z: #{$axis-z};
+  --splat-wall: #{$splat-wall};
+  --serif: #{$serif};
+  --sans: #{$font-family-sans-serif};
+}
+
+::selection {
+  background: color-mix(in srgb, var(--axis-z) 24%, transparent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--axis-z);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Navigation and footer ---------- */
+
+.navbar {
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+}
+.navbar-brand .navbar-title {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.navbar-logo {
+  max-height: 28px;
+  margin-right: 0.1rem;
+}
+.navbar .nav-link {
+  font-size: 0.95rem;
+}
+
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+}
+
+/* ---------- Reading column ---------- */
+
+main.content {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.72;
+  font-optical-sizing: auto;
+}
+@media (max-width: 575.98px) {
+  main.content {
+    font-size: 1.0625rem;
+  }
+}
+
+main.content p {
+  margin-bottom: 1.05em;
+}
+
+main.content h2,
+main.content h3,
+main.content h4,
+main.content h5 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+main.content h2 {
+  font-size: 1.45rem;
+  margin-top: 2.6rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+main.content h3 {
+  font-size: 1.16rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+main.content h4 {
+  font-size: 1rem;
+  margin-top: 1.6rem;
+}
+
+main.content a {
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--axis-z) 45%, transparent);
+}
+main.content a:hover {
+  text-decoration-color: currentColor;
+}
+
+main.content blockquote {
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  padding-left: 1.1rem;
+  margin-left: 0;
+}
+
+/* ---------- Title block of a post ---------- */
+
+.quarto-title .title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2rem, 1.35rem + 2.3vw, 2.85rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  margin-bottom: 0.6rem;
+}
+.quarto-title .subtitle,
+.quarto-title .description {
+  font-family: var(--serif);
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  margin-top: 1.4rem;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+.quarto-title .quarto-categories {
+  margin-top: 0.9rem;
+}
+.quarto-title .quarto-categories .quarto-category {
+  text-transform: none;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.12rem 0.6rem;
+  opacity: 1;
+}
+
+/* ---------- Math, code, figures, tables ---------- */
+
+.katex {
+  font-size: 1.08em;
+}
+.katex-display {
+  margin: 1.5em 0;
+}
+
+code {
+  font-size: 0.86em;
+}
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  color: var(--ink);
+  background: var(--code-surface);
+  padding: 0.1em 0.32em;
+  border-radius: 4px;
+}
+div.sourceCode,
+.cell-output pre {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+div.sourceCode pre.sourceCode {
+  padding: 0.9rem 1.1rem;
+}
+.cell-output pre {
+  background: transparent;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+figure figcaption,
+.figure-caption,
+.quarto-float-caption,
+div.csl-entry {
+  font-family: var(--sans);
+}
+figure figcaption,
+.figure-caption,
+.quarto-float-caption {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+main.content table {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Callouts ---------- */
+
+.callout {
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.callout .callout-title-container {
+  font-family: var(--sans);
+  font-weight: 600;
+}
+
+/* ---------- Margin: table of contents, sidenotes, appendix ---------- */
+
+#TOC,
+#quarto-margin-sidebar {
+  font-family: var(--sans);
+}
+#TOC h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.sidebar nav[role="doc-toc"] ul > li > a {
+  font-size: 0.85rem;
+}
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: var(--ink);
+  border-left-color: var(--axis-z);
+}
+
+.column-margin,
+.margin-aside,
+aside {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+#quarto-appendix.default {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+#quarto-appendix.default .quarto-appendix-heading {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- Home page ---------- */
+
+.home-hero {
+  margin: 0.5rem 0 0;
+}
+.home-hero svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-intro {
+  margin: 1.6rem 0 2.6rem;
+}
+.home-intro h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 1.3rem + 2.8vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.85rem;
+  border: none;
+}
+.home-intro p {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 40em;
+  margin: 0;
+}
+
+main.content h2.home-section-title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 1.4rem;
+  border: none;
+}
+
+/* Post list: date column, then title, description, and a quiet meta line.
+   `div.quarto-post` carries Quarto's default card styles; reset them here. */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+div.quarto-post.post-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.post-row .post-date {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.post-row .post-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.32rem;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+  border: none;
+}
+.post-row .post-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.post-row .post-title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+}
+.post-row .post-desc {
+  font-family: var(--serif);
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.post-row .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+@media (max-width: 575.98px) {
+  div.quarto-post.post-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
+  }
+}
+
+.post-list-empty {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  color: var(--muted);
+}
+
+/* ---------- Hero illustration ---------- */
+
+.hero-path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-opacity: 0.55;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tf-x { stroke: var(--axis-x); stroke-width: 2; stroke-linecap: round; }
+.tf-y { stroke: var(--axis-y); stroke-width: 2; stroke-linecap: round; }
+.tf-z { fill: none; stroke: var(--axis-z); stroke-width: 1.3; }
+.tf-z-dot { fill: var(--axis-z); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero .s {
+    opacity: 0;
+    animation: splat-in 700ms ease-out forwards;
+    animation-delay: calc(var(--i) * 5ms);
+  }
+  .home-hero .hero-path {
+    stroke-dasharray: var(--len);
+    stroke-dashoffset: var(--len);
+    animation: path-draw 1600ms ease-in-out 450ms forwards;
+  }
+  .home-hero .tf {
+    opacity: 0;
+    animation: splat-in 300ms ease-out forwards;
+    animation-delay: calc(450ms + var(--t) * 1600ms);
+  }
+}
+@keyframes splat-in {
+  to { opacity: 1; }
+}
+@keyframes path-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* The home page keeps its title for metadata only; the headline is in the page. */
+body.home #title-block-header {
+  display: none;
+}
+.home-intro h1 {
+  text-wrap: balance;
+}
+
+/* Figures never overflow the column on small screens. */
+main.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BibTeX block in the appendix: keep it readable in dark mode. */
+#quarto-appendix .quarto-appendix-bibtex,
+#quarto-appendix .quarto-appendix-bibtex code {
+  color: var(--ink);
+}

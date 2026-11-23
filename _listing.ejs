@@ -1,0 +1,31 @@
+<% if (items.length === 0) { %>
+
+```{=html}
+<p class="post-list-empty">No posts yet. The first one is being written.</p>
+```
+
+<% } %>
+
+::: {.list .post-list}
+
+<% for (const item of items) { %>
+
+::: {.quarto-post .post-row <%= metadataAttrs(item) %>}
+
+```{=html}
+<div class="post-date"><%= item.date %></div>
+<div class="post-body">
+<h3 class="no-anchor post-title"><a href="<%- item.path %>"><%= item.title %></a></h3>
+<% if (item.description) { %><p class="post-desc"><%= item.description %></p><% } %>
+<div class="post-meta">
+<% if (item.categories && item.categories.length) { %><span class="post-cats"><%= item.categories.join(", ") %></span><% } %>
+<% if (item['reading-time']) { %><span class="post-time"><%= item['reading-time'] %></span><% } %>
+</div>
+</div>
+```
+
+:::
+
+<% } %>
+
+:::

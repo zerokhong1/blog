@@ -1,0 +1,56 @@
+/* Self-hosted fonts, Latin subset. Licences: assets/fonts/OFL-*.txt (SIL Open Font License 1.1). */
+
+/* Literata: reading text and titles. Variable weight and optical size. */
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/literata-opsz-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Literata";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/literata-opsz-italic.woff2") format("woff2");
+}
+
+/* IBM Plex Sans: headings inside posts, navigation, captions, tables. Variable weight. */
+@font-face {
+  font-family: "Plex Sans";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("fonts/plex-sans-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex Sans";
+  font-style: italic;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("fonts/plex-sans-wght-italic.woff2") format("woff2");
+}
+
+/* IBM Plex Mono: code only. */
+@font-face {
+  font-family: "Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/plex-mono-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/plex-mono-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/plex-mono-500-normal.woff2") format("woff2");
+}

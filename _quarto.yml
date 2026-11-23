@@ -1,13 +1,20 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - assets/fonts/
 
 website:
   title: "Thai Luu"
-  description: "SLAM, Gaussian splatting and 4D reconstruction: derived on paper, checked in code."
+  description: "Notes from learning SLAM with 3D Gaussian Splatting: derived on paper, checked in code."
   site-url: https://zerokhong1.github.io/blog/
   repo-url: https://github.com/zerokhong1/blog
+  favicon: assets/mark.svg
+  open-graph: true
+  twitter-card: true
   navbar:
+    logo: assets/mark.svg
+    title: "Thai Luu"
     right:
       - text: Posts
         href: index.qmd
@@ -15,9 +22,9 @@ website:
       - icon: github
         href: https://github.com/zerokhong1
         aria-label: GitHub
-      - icon: rss
-        href: index.xml
-        aria-label: RSS feed
+      - icon: linkedin
+        href: https://www.linkedin.com/in/congthaineur/
+        aria-label: LinkedIn
   page-footer:
     left: "Thai Luu"
     right: "Built with [Quarto](https://quarto.org)"
@@ -25,13 +32,21 @@ website:
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
-    css: styles.css
+      light: [default, theme/base.scss, theme/light.scss]
+      dark: [default, theme/base.scss, theme/dark.scss]
+    respect-user-color-scheme: true
+    css: assets/fonts.css
+    lang: en
     toc: true
-    html-math-method: katex
+    grid:
+      body-width: 680px
+      margin-width: 260px
+      gutter-width: 2rem
+    html-math-method:
+      method: katex
+      url: "https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/"
     code-copy: true
-    code-overflow: wrap
+    code-overflow: scroll
     highlight-style: github
     fig-cap-location: bottom
     link-external-newwindow: true
