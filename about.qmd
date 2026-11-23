@@ -34,10 +34,10 @@ Posts stick to textbook material and published methods. To follow new ones, add 
 
 ## What this blog is, and isn't
 
-This blog does not sell courses, teach business or give advice. It is a learning notebook: I write to understand things properly and to keep getting better, and in the hope of meeting people who care about the same problems. If you are learning these topics too, I would be glad to hear from you on [LinkedIn](https://www.linkedin.com/in/congthaineur/).
+This blog does not sell courses, teach business or give advice. It is a learning notebook: I write to understand things properly and to keep getting better, and in the hope of meeting people who care about the same problems. If you are learning these topics too, I would be glad to hear from you, by email at <thailuucong.hust@gmail.com> or on [LinkedIn](https://www.linkedin.com/in/congthaineur/).
 
 ## Corrections
 
-These are notes from someone still learning, so expect mistakes. If you find one, please [open an issue](https://github.com/zerokhong1/blog/issues). I'll fix the post and credit you.
+These are notes from someone still learning, so expect mistakes. If you find one, please [open an issue](https://github.com/zerokhong1/blog/issues) or email me. I'll fix the post and credit you.
 
 Text is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and code snippets under MIT, unless a post says otherwise. Material from other sources, such as figures from course slides, is credited where it appears and keeps its original licence.
