@@ -18,7 +18,7 @@ The goal is to understand each part of a Gaussian-splatting SLAM system well eno
 - **Geometry:** getting depth and surfaces right, not only the rendered images.
 - **Global consistency:** pose graphs and loop closure.
 
-Later I'd like to move on to other sensors and dynamic scenes. I study on demand: a course or a paper gets my time when the part I'm working on needs it, so the posts will not follow this list in order. Alongside the reading I rebuild the parts in code, starting with a minimal rasterizer in plain PyTorch checked against [gsplat](https://github.com/nerfstudio-project/gsplat).
+Later I'd like to move on to other sensors and dynamic scenes. I study on demand: a course or a paper gets my time when the part I'm working on needs it, so the posts will not follow this list in order. Alongside the reading I rebuild the parts in code, starting with a minimal rasterizer in plain PyTorch checked against [gsplat](https://github.com/nerfstudio-project/gsplat). The courses and the people behind them are listed on the [Thanks](thanks.qmd) page.
 
 ## How posts work
 

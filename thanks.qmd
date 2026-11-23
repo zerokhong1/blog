@@ -1,0 +1,74 @@
+---
+title: "Thanks"
+toc: false
+---
+
+Almost everything on this blog comes from courses, books and papers that their authors chose to share. I have met almost none of the people below, yet I learn from their work every week. Thank you: to the instructors and authors named here, and to the teaching assistants, course staff and video teams whose names are often not on the page but who made these materials usable.
+
+## Courses and lectures
+
+### SLAM and state estimation
+
+- **Cyrill Stachniss** (University of Bonn): [graph-based SLAM lectures](https://www.ipb.uni-bonn.de/online-training-robotics/)
+- **Luca Carlone** (MIT): [16.485 Visual Navigation for Autonomous Vehicles](https://ocw.mit.edu/courses/16-485-visual-navigation-for-autonomous-vehicles-vnav-fall-2020/)
+- **Daniel Cremers** (TU Munich): [Multiple View Geometry](https://cvg.cit.tum.de/_media/teaching/ss2025/mvg/multiviewgeometry8.pdf)
+- **The MUDE team** (TU Delft): [Observation Theory](https://mude.citg.tudelft.nl/book/2025/observation_theory/01_Introduction.html)
+
+### 3D vision, rendering and Gaussian splatting
+
+- **Frédo Durand, Vincent Sitzmann and Peter E. Holderrieth** (MIT): [6.8300 Advances in Computer Vision](https://scenerepresentations.org/courses/2026/spring/advances-in-cv/), Spring 2026, and Vincent Sitzmann for the [Spring 2025 edition](https://ocw.mit.edu/courses/6-8300-advances-in-computer-vision-spring-2025/) on MIT OpenCourseWare
+- **Vincent Sitzmann** (MIT): [6.S980 Machine Learning for Inverse Graphics](https://www.scenerepresentations.org/courses/2023/fall/inverse-graphics)
+- **Shubham Tulsiani**, with **George Wei, Hanzhe Hu and Jianren Wang** (CMU): [16-825 Learning for 3D Vision](https://learning3d.github.io/fall25/)
+- **George Kopanas, Bernhard Kerbl, Jonathon Luiten and Antoine Guédon**: the [3D Gaussian Splatting tutorial](https://3dgstutorial.github.io) at 3DV 2024
+- **Amrita Mazumdar, Tianye Li, Sharath Girish, Aleksander Holynski, Shalini De Mello and David Luebke**, with all the speakers: the CVPR 2025 tutorial [Volumetric Video in the Real World](https://nvlabs.github.io/cvpr2025-volumetric-video-tutorial)
+- **Tsung-Wei Ke**, with **Jia-Wei Liao, Hung-Kai Chung, Shih-Hsin Fang, Po-Yi Wu and Hsin-Wei Chen** (National Taiwan University): [Embodied Vision](https://ntu-ev.github.io/lectures/)
+- **Matthias Nießner**, with **Lukas Höllein, Artem Sevastopolsky and Marc Benedi** (TU Munich): [3D Scanning & Motion Capture](https://niessner.github.io/3DScanning)
+- **Gerard Pons-Moll** (University of Tübingen): [Hands-on AI based 3D Vision](https://virtualhumans.mpi-inf.mpg.de/3DVision25/)
+- **Vladislav Golyanik** (Max Planck Institute for Informatics): [3D and 4D Computer Vision](https://4dqv.mpi-inf.mpg.de/teaching/3D_and_4D_Computer_Vision)
+- **Alec Jacobson** (University of Toronto): [Geometry Processing](https://github.com/alecjacobson/geometry-processing)
+- **Shuang Zhao, Wenzel Jakob and Tzu-Mao Li**: [Physics-Based Differentiable Rendering](https://history.siggraph.org/?p=62857), a SIGGRAPH 2020 course
+- **Tarek Elaydi** (UC Berkeley): [CS184/284A Computer Graphics](https://cs184.eecs.berkeley.edu/su25), Summer 2025
+
+### Mathematics
+
+- **Gilbert Strang** (MIT): [18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/)
+- **Philippe Rigollet** (MIT): [18.650 Statistics for Applications](https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/)
+- **Alan Edelman and Steven G. Johnson** (MIT): [18.S096 Matrix Calculus for Machine Learning and Beyond](https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/)
+- **Pavel Etingof** (MIT): Lie Groups and Lie Algebras [I](https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/) and [II](https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/)
+- **Tomasz Mrowka** (MIT): [18.965 Geometry of Manifolds](https://ocw.mit.edu/courses/18-965-geometry-of-manifolds-fall-2004/)
+- **Philipp Hennig and his group** (University of Tübingen): [Numerics of Machine Learning](https://github.com/philipphennig/NumericsOfML)
+- **The 6.3000 course staff** (MIT): [Signal Processing](https://sigproc.mit.edu/spring26)
+
+### Computing and performance
+
+- **Kayvon Fatahalian and Kunle Olukotun** (Stanford): [CS149 Parallel Computing](https://cs149.stanford.edu)
+- **Charles Leiserson and Julian Shun** (MIT): [Performance Engineering of Software Systems](https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/)
+- **Song Han** (MIT): [6.5940 TinyML and Efficient Deep Learning Computing](https://hanlab.mit.edu/courses/2024-fall-65940)
+- **The GPU MODE community** and its speakers: [lectures](https://github.com/gpu-mode/lectures)
+
+### Writing
+
+- **Google's technical writing team**: [Technical Writing One and Two](https://developers.google.com/tech-writing/overview)
+- **Kristin Sainani** (Stanford): [Writing in the Sciences](https://www.coursera.org/learn/sciwrite)
+
+## Books
+
+- **Timothy D. Barfoot**: [*State Estimation for Robotics*](https://asrl.utias.utoronto.ca/~tdb/), 2nd edition
+- **Luca Carlone, Ayoung Kim, Timothy Barfoot, Daniel Cremers and Frank Dellaert**, editors, and all the chapter authors: [*The SLAM Handbook*](https://asrl.utias.utoronto.ca/~tdb/slam/)
+- **Frank Dellaert and Michael Kaess**: *Factor Graphs for Robot Perception*
+- **Nicolas Boumal**: [*An Introduction to Optimization on Smooth Manifolds*](https://www.nicolasboumal.net/book)
+- **Peter Teunissen**: *Testing Theory: An Introduction*
+
+## Papers, surveys and tutorials
+
+- **Surveys and tutorials:** Tosi et al., *How NeRFs and 3D Gaussian Splatting are Reshaping SLAM* (2024); Grisetti et al., *A Tutorial on Graph-Based SLAM* (2010); Solà et al., *A micro Lie theory for state estimation in robotics* (2018); Schubert et al., [*Visual Place Recognition: A Tutorial*](https://arxiv.org/abs/2303.03281) (2023)
+- **Rendering and Gaussians:** Zwicker et al., *EWA Splatting* (2002); Mildenhall et al., *NeRF* (2020); Kerbl et al., *3D Gaussian Splatting for Real-Time Radiance Field Rendering* (2023); Ye and Kanazawa, *Mathematical Supplement for the gsplat Library* (2023); Yu et al., *Mip-Splatting* (2024); Huang et al., *2D Gaussian Splatting* (2024)
+- **Dense and Gaussian SLAM:** Newcombe et al., *KinectFusion* (2011); Keetha et al., *SplaTAM* (2024); Matsuki et al., *Gaussian Splatting SLAM* (2024); Huang et al., *Photo-SLAM* (2024); Zhu et al., *LoopSplat* (2025)
+- **Optimization and robustness:** Yang et al., *Graduated Non-Convexity for Robust Spatial Perception* (2020); Mangelson et al., *Pairwise Consistent Measurement Set Maximization for Robust Multi-robot Map Merging* (2018); Teed and Deng, *DROID-SLAM* (2021); Murai et al., *MASt3R-SLAM* (2025)
+- **Learned 3D priors:** Wang et al., *DUSt3R* (2024); Wang et al., *VGGT* (2025)
+
+---
+
+Thank you as well to MIT OpenCourseWare and to every university and lab above that publishes its teaching openly, to the people who maintain the open-source tools these posts are built with (NumPy, SciPy, Matplotlib, gsplat, GTSAM, Open3D and Quarto among them), and to the teachers I have learned from in person.
+
+Course materials, books and papers belong to their authors. When a post uses a figure, an equation or a result from one of them, it credits the source where it appears. If I have credited someone wrongly or left someone out, please [open an issue](https://github.com/zerokhong1/blog/issues).

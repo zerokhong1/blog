@@ -19,6 +19,7 @@ website:
       - text: Posts
         href: index.qmd
       - about.qmd
+      - thanks.qmd
       - icon: github
         href: https://github.com/zerokhong1
         aria-label: GitHub
