@@ -1,21 +1,37 @@
 ---
 title: "About"
+toc: false
 ---
 
-<!-- Edit this page before the first post goes live. -->
+I'm Thai Luu, and I'm learning SLAM with 3D Gaussian Splatting. This blog is where I write up what I learn, one question at a time.
 
-I'm Thai Luu. I work on SLAM with 3D Gaussian Splatting: how camera drift enters a dense map, how loop closure repairs it, and what changes when the scene moves (4D).
+I came to the field from classical state estimation (Kalman and particle filters, poses on Lie groups, LiDAR-inertial odometry), so the rendering side is newer to me than the estimation side.
 
-- **Paper:** *Geometry-Aware Online Mapping for 3D Gaussian Splatting SLAM*, IROS 2026, first author. [arXiv](https://arxiv.org/abs/2608.14902)
-- **Code:** [github.com/zerokhong1](https://github.com/zerokhong1)
+## What I'm learning
 
-## How this blog works
+The goal is to understand each part of a Gaussian-splatting SLAM system well enough to rebuild it:
 
-I am working through a long list of courses on SLAM, 3D vision, rendering and the mathematics underneath them. Every two weeks I close a block of that study with one post. Each post follows the same rule:
+- **Rendering:** how volume rendering becomes the alpha blending that 3DGS uses.
+- **3D Gaussian Splatting:** the representation, how each Gaussian projects onto the image, and the rasterizer with its gradients.
+- **Tracking:** estimating the camera pose by optimizing through the rasterizer.
+- **Mapping:** adding, pruning and managing Gaussians as the map grows.
+- **Geometry:** getting depth and surfaces right, not only the rendered images.
+- **Global consistency:** pose graphs and loop closure.
 
-1. Ask one question.
-2. Derive the answer on paper.
-3. Check it in code against a reference implementation, with the numbers shown.
-4. Say what is still open.
+Later I'd like to move on to other sensors and dynamic scenes. I study on demand: a course or a paper gets my time when the part I'm working on needs it, so the posts will not follow this list in order. Alongside the reading I rebuild the parts in code, starting with a minimal rasterizer in plain PyTorch checked against [gsplat](https://github.com/nerfstudio-project/gsplat).
 
-If a derivation is wrong, please [open an issue](https://github.com/zerokhong1/zerokhong1.github.io/issues).
+## How posts work
+
+Each post asks one question and puts it through the test I use to decide whether I understand something:
+
+1. Derive the answer on paper.
+2. Re-implement it and match a reference implementation, with the numbers shown.
+3. Say what is still open.
+
+Posts stick to textbook material and published methods.
+
+## Corrections
+
+These are notes from someone still learning, so expect mistakes. If you find one, please [open an issue](https://github.com/zerokhong1/blog/issues). I'll fix the post and credit you.
+
+Text is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and code snippets under MIT, unless a post says otherwise. Material from other sources, such as figures from course slides, is credited where it appears and keeps its original licence.
