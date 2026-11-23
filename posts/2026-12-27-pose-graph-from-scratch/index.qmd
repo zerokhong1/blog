@@ -1,0 +1,40 @@
+---
+title: "Pose-graph SLAM from scratch: Gauss–Newton on SE(2) with robust kernels"
+description: "TODO: one sentence on the question this post answers."
+date: 2026-12-27
+categories: [SLAM, pose graph, least squares]
+draft: true
+---
+
+<!--
+Blog #1 · closes block B01 (Stachniss V1, V3, V4 + labs). Due Sunday 27/12/2026.
+Write it yourself from your own notes and lab code.
+To publish: set `draft: false`, run `quarto render posts/2026-12-27-pose-graph-from-scratch/index.qmd`,
+then commit this folder and `_freeze/` and push.
+Do not include unpublished H2 or D results.
+-->
+
+::: {.callout-note}
+## TL;DR
+TODO
+:::
+
+## The question
+
+TODO
+
+## Derivation
+
+TODO
+
+## Code that checks it
+
+TODO
+
+## What is still open
+
+TODO
+
+## References
+
+- Cyrill Stachniss, *Graph-based SLAM using Pose Graphs*, *Graph-Based SLAM with Landmarks*, *Robust Least Squares for Graph-Based SLAM* and *Hierarchical Pose Graphs for SLAM*, University of Bonn online training: <https://www.ipb.uni-bonn.de/online-training-robotics/>

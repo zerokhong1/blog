@@ -1,0 +1,21 @@
+---
+title: "About"
+---
+
+<!-- Edit this page before the first post goes live. -->
+
+I'm Thai Luu. I work on SLAM with 3D Gaussian Splatting: how camera drift enters a dense map, how loop closure repairs it, and what changes when the scene moves (4D).
+
+- **Paper:** *Geometry-Aware Online Mapping for 3D Gaussian Splatting SLAM*, IROS 2026, first author. [arXiv](https://arxiv.org/abs/2608.14902)
+- **Code:** [github.com/zerokhong1](https://github.com/zerokhong1)
+
+## How this blog works
+
+I am working through a long list of courses on SLAM, 3D vision, rendering and the mathematics underneath them. Every two weeks I close a block of that study with one post. Each post follows the same rule:
+
+1. Ask one question.
+2. Derive the answer on paper.
+3. Check it in code against a reference implementation, with the numbers shown.
+4. Say what is still open.
+
+If a derivation is wrong, please [open an issue](https://github.com/zerokhong1/zerokhong1.github.io/issues).

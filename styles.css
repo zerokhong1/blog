@@ -1,0 +1,23 @@
+/* Keep text at a readable measure; let figures and math breathe. */
+main.content {
+  max-width: 760px;
+}
+
+.quarto-title-banner {
+  margin-bottom: 1.5rem;
+}
+
+figure figcaption {
+  font-size: 0.9rem;
+  color: var(--bs-secondary-color);
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+.callout.callout-note .callout-title-container {
+  font-weight: 600;
+}

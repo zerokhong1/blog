@@ -1,0 +1,82 @@
+---
+title: "Post title: a question or a claim"
+description: "One sentence: the question this post answers and what the reader can do after reading."
+date: 2026-12-27
+categories: [SLAM]
+draft: true
+---
+
+<!--
+How to use this template
+1. Copy it to posts/YYYY-MM-DD-short-slug/index.qmd.
+2. Keep the five sections. Delete these comments.
+3. Run `quarto preview` while writing.
+4. To publish: set `draft: false`, run `quarto render posts/<this-folder>/index.qmd`,
+   then commit the post and `_freeze/` and push.
+Files and folders that start with "_" are never rendered, so this template stays private.
+-->
+
+::: {.callout-note}
+## TL;DR
+Two or three sentences: the question, the answer, and the one number or figure that shows it.
+:::
+
+## The question
+
+What problem, for whom, and why the usual explanation is not enough.
+
+## Derivation
+
+Inline math uses single dollars: $\mathbf{x} \in \mathbb{R}^3$. Display math uses double dollars:
+
+$$
+\mathbf{x}^\star = \arg\min_{\mathbf{x}} \sum_k \lVert \mathbf{e}_k(\mathbf{x}) \rVert^2_{\boldsymbol{\Omega}_k}
+$$
+
+Give an equation a label when you refer to it later:
+
+$$
+\mathbf{H}\,\delta\mathbf{x} = -\mathbf{b}
+$$ {#eq-normal}
+
+and refer to it as @eq-normal.
+
+## Code that checks it
+
+Keep the code short and print the number the text claims.
+
+```{python}
+import numpy as np
+
+rng = np.random.default_rng(0)
+A = rng.standard_normal((50, 3))
+x_true = np.array([1.0, -2.0, 0.5])
+b = A @ x_true + 1e-3 * rng.standard_normal(50)
+
+x_hat, *_ = np.linalg.lstsq(A, b, rcond=None)
+print(f"max |x_hat - x_true| = {np.abs(x_hat - x_true).max():.2e}")
+```
+
+```{python}
+#| label: fig-residuals
+#| fig-cap: "Every figure gets a caption that says what to look at. Here: residuals stay at the noise level."
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 2.5))
+ax.plot(b - A @ x_hat, ".", ms=4)
+ax.axhline(0, lw=0.8, color="gray")
+ax.set_xlabel("measurement index")
+ax.set_ylabel("residual")
+fig.tight_layout()
+```
+
+As @fig-residuals shows, the fit leaves only noise.
+
+## What is still open
+
+One or two honest paragraphs: where the derivation stops being exact, cases where the code disagrees, and what you would test next.
+
+## References
+
+- Course name, lecture number and slide pages.
+- Papers, each with a link.

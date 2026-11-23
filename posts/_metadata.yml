@@ -1,0 +1,8 @@
+# Applies to every post in this folder.
+author: "Thai Luu"
+freeze: true          # code in posts runs only on your machine; CI reuses _freeze/
+title-block-banner: false
+toc: true
+toc-depth: 2
+citation: true
+license: "CC BY 4.0"
