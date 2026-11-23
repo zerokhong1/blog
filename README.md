@@ -2,85 +2,70 @@
 
 [![Publish site](https://github.com/zerokhong1/blog/actions/workflows/publish.yml/badge.svg)](https://github.com/zerokhong1/blog/actions/workflows/publish.yml)
 
-Source of <https://zerokhong1.github.io/blog/>, my notes on learning SLAM with 3D Gaussian Splatting: one question per post, derived on paper and checked in code. Built with [Quarto](https://quarto.org) and published to GitHub Pages by GitHub Actions.
+Source of **[zerokhong1.github.io/blog](https://zerokhong1.github.io/blog/)**: notes on learning SLAM with 3D Gaussian Splatting, one question per post, derived on paper and checked in code. Built with [Quarto](https://quarto.org), hosted on GitHub Pages.
 
-## Quick start
+## Run locally
 
-Install [Quarto](https://quarto.org/docs/get-started/). Posts with Python cells also need `pip install jupyter numpy matplotlib`.
+Needs [Quarto](https://quarto.org/docs/get-started/), plus `pip install jupyter numpy matplotlib` for posts with Python code.
 
 ```bash
-git clone https://github.com/zerokhong1/blog.git
-cd blog
-quarto preview        # live preview in the browser, reloads on save
+git clone https://github.com/zerokhong1/blog.git && cd blog
+quarto preview    # live preview, reloads on save
 ```
 
 ## Write a post
 
-1. Start from the template:
+```bash
+mkdir posts/YYYY-MM-DD-slug
+cp _templates/post.qmd posts/YYYY-MM-DD-slug/index.qmd
+```
 
-   ```bash
-   mkdir posts/YYYY-MM-DD-short-slug
-   cp _templates/post.qmd posts/YYYY-MM-DD-short-slug/index.qmd
-   ```
+The template shows the post structure and the conventions for math, equation labels and figures. Write with `draft: true` and `quarto preview`.
 
-   The template shows the conventions for math, equation labels, figures and captions.
-2. Fill in `title`, `description`, `date` and `categories`. Keep `draft: true` while writing and run `quarto preview`.
-3. When it is ready, set `draft: false` and render that post on its own, so its code runs and the results are stored in `_freeze/`:
+> [!WARNING]
+> `draft: true` only hides a post on the site. This repository is public, so don't push a post until it is ready.
 
-   ```bash
-   quarto render posts/YYYY-MM-DD-short-slug/index.qmd
-   ```
+### Publish
 
-4. Commit the post folder **and** `_freeze/`, then push to `main`. The site updates a minute or two later.
+1. Go through the checklist below, then set `draft: false`.
+2. Render the post on its own: `quarto render posts/YYYY-MM-DD-slug/index.qmd`
+3. Commit the post folder **and** `_freeze/`, then push to `main`. The site updates a minute or two later.
 
-Each post comes with a 5–8 minute YouTube video that I make myself to illustrate it: my own figures, animations and code, with no clips or slides taken from the courses. Embed it in the post with Quarto's video shortcode, for example `{{< video https://www.youtube.com/watch?v=VIDEO_ID >}}`.
+> [!IMPORTANT]
+> CI and a plain `quarto render` never run post code (`freeze: true` in `posts/_metadata.yml`); they reuse the results stored in `_freeze/`. Step 2 re-runs the post's code and updates them. Skip it after a code change and the site shows stale numbers, or CI fails with a Jupyter error because the results are missing.
 
-### Before you publish
+<details>
+<summary><b>Pre-publish checklist</b></summary>
 
-- [ ] One question, answered in this order: derivation, then code that matches a reference implementation with the numbers printed, then what is still open.
-- [ ] 1,200–2,500 words and at least one figure, with a caption that says what to look at.
-- [ ] Every figure, equation and code snippet taken from a course or paper is credited where it appears and listed in References. MIT OpenCourseWare material is CC BY-NC-SA, which this site's CC BY 4.0 does not cover: keep the credit and name that licence in the caption.
+- [ ] One question, answered in order: derivation → code that matches a reference implementation, with the numbers printed → what is still open.
+- [ ] 1,200–2,500 words and at least one figure, captioned with what to look at.
+- [ ] Anything taken from a course or paper is credited where it appears and listed in References. MIT OpenCourseWare is CC BY-NC-SA, which this site's CC BY 4.0 does not cover: name that licence in the caption.
 - [ ] Nothing unpublished: no results or ideas from ongoing work.
-- [ ] The template's HTML comments are deleted. They are invisible on the page but stay in its HTML source.
-- [ ] The post was rendered on its own after the last code change, and `_freeze/` is committed.
-- [ ] The video is self-made (no course clips or slides), embedded in the post, and its YouTube description names the course it builds on.
+- [ ] The template's HTML comments are deleted (hidden on the page, but still in its source).
+- [ ] A self-made 5–8 minute video (own figures, animations and code; no course clips or slides) is embedded with `{{< video https://www.youtube.com/watch?v=VIDEO_ID >}}`, and its YouTube description names the course it builds on.
 
-## How publishing works
+</details>
 
-- Every push to `main` runs [`.github/workflows/publish.yml`](.github/workflows/publish.yml): Quarto renders the site and the result is deployed to GitHub Pages (**Settings → Pages → Build and deployment → Source: GitHub Actions**). To publish again without a new commit, open **Actions → Publish site → Run workflow**.
-- Posts use `freeze: true` (set in `posts/_metadata.yml`), so CI never runs Python; it reuses the results stored in `_freeze/`. A plain `quarto render` reuses them too, so the numbers on the site go stale unless you render the changed post on its own.
-- `draft: true` only hides a post on the site. This repository is public, so anyone can read a pushed draft on GitHub. Commit a post only when it is ready to go out.
+## Deployment
 
-## Troubleshooting
-
-| Symptom | Fix |
-| --- | --- |
-| Deploy fails with "Ensure GitHub Pages has been enabled" | Set the Pages source to GitHub Actions (see above), then re-run the workflow. |
-| Render fails in CI with a Jupyter or Python error | The post's results are missing from `_freeze/`. Render the post locally and commit `_freeze/`. |
-| Numbers on the site don't match the code | Render the post on its own and commit `_freeze/`. |
-| `git push` is rejected as non-fast-forward | The remote has commits you don't have yet, for example from another machine. Run `git pull --rebase`, then push. |
+Every push to `main` runs [`publish.yml`](.github/workflows/publish.yml), which renders the site and deploys it to GitHub Pages. To redeploy without a commit, use **Actions → Publish site → Run workflow**. If the deploy fails with "Ensure GitHub Pages has been enabled", set **Settings → Pages → Source** to **GitHub Actions** and re-run it.
 
 ## Layout
 
 ```
-_quarto.yml          site settings: title, navbar, theme, KaTeX math
-index.qmd            home page: illustration, headline and the post list (with RSS feed index.xml)
-_listing.ejs         how the post list is drawn, including the "no posts yet" message
-_hero.qmd            home-page illustration, generated by _tools/make_hero.py (do not edit by hand)
-about.qmd            About page
-thanks.qmd           Thanks page: the courses and people this blog learns from
-posts/_metadata.yml  defaults for every post: author, freeze, table of contents, sidenotes, licence
-posts/<date-slug>/   one folder per post: index.qmd and its figures
-_templates/post.qmd  post template; files and folders starting with "_" are never rendered
-_freeze/             stored code results, created by the first render of a post with code
-theme/               colours (light.scss, dark.scss) and all styling (base.scss)
-assets/              logo and favicon (mark.svg), profile photo (avatar.jpg), self-hosted fonts and their licences
-.github/workflows/   publish workflow
+_quarto.yml            site config: navbar, theme, KaTeX math
+index.qmd              home page and post list (RSS: index.xml), drawn by _listing.ejs
+_hero.qmd              home illustration, generated by _tools/make_hero.py; don't hand-edit
+about.qmd, thanks.qmd  About and Thanks pages
+posts/_metadata.yml    defaults for every post: author, freeze, TOC, sidenotes, licence
+posts/<date-slug>/     one folder per post: index.qmd and its figures
+_templates/post.qmd    post template (anything starting with "_" is never rendered)
+_freeze/               stored code results, committed with each post
+theme/                 colours (light.scss, dark.scss) and styling (base.scss)
+assets/                logo, avatar, self-hosted fonts (Literata, IBM Plex) + OFL licences
 ```
 
-## Theme
-
-Text is set in Literata, headings and interface in IBM Plex Sans, code in IBM Plex Mono; all three are served from `assets/fonts/` under the SIL Open Font License. Colours live in `theme/light.scss` and `theme/dark.scss`: the three accents are the axis colours of a pose frame (x red, y green, z blue), and dark mode follows the reader's system setting. To change the home-page illustration, edit `_tools/make_hero.py` and run `python3 _tools/make_hero.py`.
+To redraw the home-page illustration, edit `_tools/make_hero.py` and run `python3 _tools/make_hero.py`.
 
 ## Licence
 
